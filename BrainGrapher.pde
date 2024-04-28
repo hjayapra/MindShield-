@@ -1,10 +1,6 @@
 // Main controller / model file for the the Processing Brain Grapher.
 
-// See README.markdown for more info.
-// See http://frontiernerds.com/brain-hack for a tutorial on getting started with the Arduino Brain Library and this Processing Brain Grapher.
-
-// Latest source code is on https://github.com/kitschpatrol/Processing-Brain-Grapher
-// Created by Eric Mika in Fall 2010, updates Spring 2012 and again in early 2014.
+// Modified April 2024 , arduino COM 9 , threshold values changed for Attention, Mediation
 
 import processing.serial.*;
 import controlP5.*;
@@ -114,7 +110,6 @@ void draw() {
 
 void serialEvent(Serial p) {
   // Split incoming packet on commas
-  // See https://github.com/kitschpatrol/Arduino-Brain-Library/blob/master/README for information on the CSV packet format
   
   String incomingString = p.readString().trim();
   print("Received string over serial: ");
